@@ -1,0 +1,122 @@
+{
+    "Metros": [
+        {
+            "metroAreaId": 1006,
+            "metroAreaTitle": "Richmond",
+            "metroAreaStateAbr": "VA",
+            "metroAreaStateName": "Virginia"
+        },
+        {
+            "metroAreaId": 1007,
+            "metroAreaTitle": "Atlanta",
+            "metroAreaStateAbr": "GA",
+            "metroAreaStateName": "Georgia"
+        },
+        {
+            "metroAreaId": 1008,
+            "metroAreaTitle": "Charleston",
+            "metroAreaStateAbr": "SC",
+            "metroAreaStateName": "South Carolina"
+        }
+    ],
+    "Projects":[
+        {
+            "projectGroupId": 23,
+            "metroAreaId": 1007,
+            "fullName": "Edgewater",
+            "status": "a"
+        },
+        {
+            "projectGroupId": 25,
+            "metroAreaId": 1007,
+            "fullName": "Inwood",
+            "status": "a"
+        },
+        {
+            "projectGroupId": 41,
+            "metroAreaId": 1008,
+            "fullName": "Estuary at Bowen Village",
+            "status": "a"
+        },
+        {
+            "projectGroupId": 43,
+            "metroAreaId": 1008,
+            "fullName": "Mixson",
+            "status": "i"
+        },
+        {
+            "projectGroupId": 47,
+            "metroAreaId": 1008,
+            "fullName": "Oldfield",
+            "status": "a"
+        }
+    ],
+    "Products":[
+        {
+            "projectName": "Edgewater",
+            "projectId": "Y58",
+            "projectGroupId": 23,
+            "productName": "The Prescott"
+        },
+        {
+            "projectName": "Edgewater 50",
+            "projectId": "980",
+            "projectGroupId": 23,
+            "productName": "The Davis"
+        }, 
+        {
+            "projectName": "Edgewater 50",
+            "projectId": "E15",
+            "projectGroupId": 23,
+            "productName": "The Amelia"
+        }, 
+        {
+            "projectName": "Edgewater 50",
+            "projectId": "Y54",
+            "projectGroupId": 23,
+            "productName": "The Lockwood"
+        }, 
+        {
+            "projectName": "Estuary",
+            "projectId": "U68",
+            "projectGroupId": 41,
+            "productName": "The Stono"
+        },
+        {
+            "projectName": "Estuary",
+            "projectId": "1601",
+            "projectGroupId": 41,
+            "productName": "The Moultrie"
+        }, 
+        {
+            "projectName": "Inwood SFD",
+            "projectId": "980",
+            "projectGroupId": 25,
+            "productName": "The Dupree"
+        },
+        {
+            "projectName": "Inwood SFD",
+            "projectId": "E15",
+            "projectGroupId": 25,
+            "productName": "Inwood"
+        },
+        {
+            "projectName": "Mixson",
+            "projectId": "1674",
+            "projectGroupId": 43,
+            "productName": "The Stella"
+        },
+        {
+            "projectName": "Oldfield",
+            "projectId": "1665",
+            "projectGroupId": 47,
+            "productName": "The Tidalview"
+        },
+        {
+            "projectName": "Oldfield",
+            "projectId": null,
+            "projectGroupId": 47,
+            "productName": null
+        }
+    ]
+}
