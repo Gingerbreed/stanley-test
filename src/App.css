@@ -41,9 +41,25 @@ button {
     color: rgb(0, 0, 0);
 }
 
+.indigo {
+  background-color: #096ae1;
+  font-size: calc(10px + 1vmin);
+  color: white;
+  flex: 1;
+  padding: auto;
+  float: left;
+  position: relative;
+  width: 33.333%;
+  border: 20px;
+  border-color: #282c34;
+}
+
 .Results {
+  float: left;
+  position: relative;
+  width: 100%;
   background-color: #282c34;
-  display: flex;
+
   font-size: calc(10px + 1vmin);
   color: white;
   padding: auto;

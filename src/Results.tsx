@@ -1,6 +1,6 @@
 export default function Results({ rs }: { rs: Result }) {
   return (
-    <div>
+    <div className={"indigo"}>
       <h3> {rs.productName} </h3>
       <div>
         <p>Product Id: {rs.productId}</p>

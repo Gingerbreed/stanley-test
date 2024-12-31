@@ -19,9 +19,7 @@ function App() {
           </div>
         </form>
       </header>
-      <div className="Results">
-        <ResultsList />
-      </div>
+      <ResultsList />
     </div>
   );
 }
