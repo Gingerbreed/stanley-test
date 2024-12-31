@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/stanley-test/static/css/main.f855e6bc.css",
+    "main.js": "/stanley-test/static/js/main.54bf1bcf.js",
+    "index.html": "/stanley-test/index.html",
+    "main.f855e6bc.css.map": "/stanley-test/static/css/main.f855e6bc.css.map",
+    "main.54bf1bcf.js.map": "/stanley-test/static/js/main.54bf1bcf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.54bf1bcf.js"
+  ]
+}
