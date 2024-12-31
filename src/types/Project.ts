@@ -1,15 +1,15 @@
-class Project {
-    projectGroupId: number | undefined;
-    metroAreaId: number | undefined;
-    fullName: string | undefined;
-    status: string | undefined; //only show first character
-    public constructor(    projectGroupId: number | undefined,
-        metroAreaId: number | undefined,
-        fullName: string | undefined,
-        status: string | undefined) {
-     this.projectGroupId = projectGroupId;
-     this.metroAreaId = metroAreaId;
-     this.fullName = fullName;
-     this.status = status;
-    }
+interface  Project {
+    readonly projectGroupId: number | undefined;
+    readonly metroAreaId: number | undefined;
+    readonly fullName: string | undefined;
+    readonly status: string | undefined; //only show first character
 }
+// public constructor(    projectGroupId: number | undefined,
+//     metroAreaId: number | undefined,
+//     fullName: string | undefined,
+//     status: string | undefined) {
+//  this.projectGroupId = projectGroupId;
+//  this.metroAreaId = metroAreaId;
+//  this.fullName = fullName;
+//  this.status = status;
+//     }
