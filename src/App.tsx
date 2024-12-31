@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ResultsList from "./ResultsList";
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
           </div>
         </form>
       </header>
-      <div className="Results"></div>
+      <div className="Results">
+        <ResultsList />
+      </div>
     </div>
   );
 }
