@@ -1,8 +1,8 @@
 interface Metro {
-    readonly metroAreaId: number | undefined;
-    readonly metroAreaTitle: string | undefined;
-    readonly metroAreaStateAbr: string | undefined;
-    readonly metroAreaStateName: string | undefined;
+    readonly metroAreaId: number | undefined | null;
+    readonly metroAreaTitle: string | undefined | null;
+    readonly metroAreaStateAbr: string | undefined | null;
+    readonly metroAreaStateName: string | undefined | null;
 }
 // public constructor(metroAreaId: number | undefined,
 //     metroAreaTitle: string | undefined,

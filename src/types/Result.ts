@@ -1,7 +1,7 @@
 interface Result {
-    readonly productName: string;
-    readonly productId: number;
-    readonly metroArea: string;
-    readonly fullName: string;
-    readonly projectGroupId: number;
+    readonly productName: string | undefined | null;
+    readonly productId: string | undefined | null;
+    readonly metroArea: string | undefined | null;
+    readonly fullName: string | undefined | null;
+    readonly projectGroupId: number | undefined | null;
 }

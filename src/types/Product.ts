@@ -1,8 +1,8 @@
 interface Product {
-    readonly projectName: string | undefined;
-    readonly productId: number | undefined;
-    readonly projectGroupId: number | undefined;
-    readonly productName: string | undefined; 
+    readonly projectName: string | undefined | null;
+    readonly productId: string | undefined | null;
+    readonly projectGroupId: number | undefined | null;
+    readonly productName: string | undefined | null;
 }
 
 // public constructor(    projectName: string | undefined,
