@@ -1,4 +1,4 @@
-class Metro {
+export class Metro {
   readonly metroAreaId: string | undefined | null;
   readonly metroAreaTitle: string | undefined | null;
   readonly metroAreaStateAbr: string | undefined | null;

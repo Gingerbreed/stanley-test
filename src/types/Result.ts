@@ -1,4 +1,8 @@
-class Result {
+import { Metro } from "./Metro";
+import { Product } from "./Product";
+import { Project } from "./Project";
+
+export class Result {
   readonly product: Product;
   readonly metro: Metro;
   readonly project: Project;

@@ -1,4 +1,4 @@
-class Product {
+export class Product {
   readonly projectName: string | undefined | null;
   readonly productId: string | undefined | null;
   readonly projectGroupId: string | undefined | null;

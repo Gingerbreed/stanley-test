@@ -1,3 +1,5 @@
+import { Result } from "./types/Result";
+
 export default function Results({ rs }: { rs: Result }) {
   return (
     <div className={"indigo"}>
