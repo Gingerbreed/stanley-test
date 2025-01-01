@@ -8,6 +8,7 @@ import { Product } from "./types/Product";
 import { Project } from "./types/Project";
 
 export default function App() {
+  const initialResults: Result[] = mapApiData();
   const [results, setResults] = useState(initialResults);
   return (
     <div className="App">
@@ -47,29 +48,38 @@ export default function App() {
   }
 }
 function mapApiData() {
-  let results: Result[] = [
-    {
-      product: {
-        projectName: "undefined",
-        productId: "undefined",
-        projectGroupId: "undefined",
-        productName: "undefined",
-      },
-      metro: {
-        metroAreaId: "undefined",
-        metroAreaTitle: "undefined",
-        metroAreaStateAbr: "VA",
-        metroAreaStateName: "undefined",
-      },
-      project: {
-        projectGroupId: "undefined",
-        metroAreaId: "undefined",
-        fullName: "undefined",
-        status: "undefined",
-      },
-    },
-  ];
-
+  //if using an actual backend, we'd call out from here and then map that data.
+  let results: Result[] = [];
+  let metros: Metro[] = data.Metros;
+  let projects: Project[] = data.Projects;
+  let products: Product[] = data.Products;
+  for (let index in metros) {
+    let testProjects = projects.filter(
+      (i) => i.metroAreaId === metros[index].metroAreaId
+    );
+    if (!testProjects) {
+      //We have no projects associated, add the metro area and continue
+      results.push(new Result(new Product(), metros[index], new Project()));
+      continue;
+    }
+    for (let projectIndex in testProjects) {
+      let testProducts = products.filter(
+        (i) => i.projectGroupId === testProjects[projectIndex].projectGroupId
+      );
+      if (!testProducts) {
+        //We have no products associated, add the metro area and continue
+        results.push(
+          new Result(new Product(), metros[index], testProjects[index])
+        );
+        continue;
+      }
+      for (let product in testProducts) {
+        results.push(
+          new Result(testProducts[product], metros[index], testProjects[index])
+        );
+      }
+    }
+  }
   return results;
 }
 function includes(param: string, result: Result) {
