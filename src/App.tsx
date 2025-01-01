@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import ResultsList from "./ResultsList";
+import data from "./response.json";
 
 const initialResults: Result[] = mapApiData();
 
