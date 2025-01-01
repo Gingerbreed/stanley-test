@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/stanley-test/static/css/main.fe25e0f2.css",
-    "main.js": "/stanley-test/static/js/main.48027d8e.js",
+    "main.css": "/stanley-test/static/css/main.a15800c0.css",
+    "main.js": "/stanley-test/static/js/main.966f8c01.js",
     "index.html": "/stanley-test/index.html",
-    "main.fe25e0f2.css.map": "/stanley-test/static/css/main.fe25e0f2.css.map",
-    "main.48027d8e.js.map": "/stanley-test/static/js/main.48027d8e.js.map"
+    "main.a15800c0.css.map": "/stanley-test/static/css/main.a15800c0.css.map",
+    "main.966f8c01.js.map": "/stanley-test/static/js/main.966f8c01.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe25e0f2.css",
-    "static/js/main.48027d8e.js"
+    "static/css/main.a15800c0.css",
+    "static/js/main.966f8c01.js"
   ]
 }
