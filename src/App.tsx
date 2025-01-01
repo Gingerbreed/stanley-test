@@ -50,14 +50,15 @@ export default function App() {
 function mapApiData() {
   //if using an actual backend, we'd call out from here and then map that data.
   let results: Result[] = [];
-  let metros: Metro[] = data.Metros;
-  let projects: Project[] = data.Projects;
-  let products: Product[] = data.Products;
+  const metros: Metro[] = data.Metros;
+  const projects: Project[] = data.Projects;
+  const products: Product[] = data.Products;
+
   for (let index in metros) {
     let testProjects = projects.filter(
       (i) => i.metroAreaId === metros[index].metroAreaId
     );
-    if (!testProjects) {
+    if (!testProjects.length) {
       //We have no projects associated, add the metro area and continue
       results.push(new Result(new Product(), metros[index], new Project()));
       continue;
@@ -66,16 +67,20 @@ function mapApiData() {
       let testProducts = products.filter(
         (i) => i.projectGroupId === testProjects[projectIndex].projectGroupId
       );
-      if (!testProducts) {
+      if (!testProducts.length) {
         //We have no products associated, add the metro area and continue
         results.push(
-          new Result(new Product(), metros[index], testProjects[index])
+          new Result(new Product(), metros[index], testProjects[projectIndex])
         );
         continue;
       }
       for (let product in testProducts) {
         results.push(
-          new Result(testProducts[product], metros[index], testProjects[index])
+          new Result(
+            testProducts[product],
+            metros[index],
+            testProjects[projectIndex]
+          )
         );
       }
     }
