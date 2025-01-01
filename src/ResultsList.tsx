@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import Results from "./Results";
 
 export default function ResultsList({ results }: { results: Result[] }) {
