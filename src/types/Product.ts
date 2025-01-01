@@ -1,7 +1,7 @@
-interface Product {
+class Product {
     readonly projectName: string | undefined | null;
     readonly productId: string | undefined | null;
-    readonly projectGroupId: number | undefined | null;
+    readonly projectGroupId: string | undefined | null;
     readonly productName: string | undefined | null;
 }
 

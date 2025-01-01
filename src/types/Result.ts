@@ -1,7 +1,10 @@
-interface Result {
-    readonly productName: string | undefined | null;
-    readonly productId: string | undefined | null;
-    readonly metroArea: string | undefined | null;
-    readonly fullName: string | undefined | null;
-    readonly projectGroupId: number | undefined | null;
+class Result {
+  readonly product: Product;
+  readonly metro: Metro;
+  readonly project: Project;
+  constructor(product: Product, metro: Metro, project: Project) {
+    this.product = product;
+    this.metro = metro;
+    this.project = project;
+  }
 }

@@ -1,6 +1,6 @@
-interface  Project {
-    readonly projectGroupId: number | undefined | null;
-    readonly metroAreaId: number | undefined | null;
+type Project = {
+    readonly projectGroupId: string | undefined | null;
+    readonly metroAreaId: string | undefined | null;
     readonly fullName: string | undefined | null;
     readonly status: string | undefined | null; //only show first character
 }

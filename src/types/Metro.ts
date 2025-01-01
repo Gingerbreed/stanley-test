@@ -1,5 +1,5 @@
-interface Metro {
-    readonly metroAreaId: number | undefined | null;
+type Metro =  {
+    readonly metroAreaId: string | undefined | null;
     readonly metroAreaTitle: string | undefined | null;
     readonly metroAreaStateAbr: string | undefined | null;
     readonly metroAreaStateName: string | undefined | null;
