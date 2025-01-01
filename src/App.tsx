@@ -2,36 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import ResultsList from "./ResultsList";
 
-const initialResults: Result[] = [
-  {
-    fullName: "Test Drive",
-    productName: "Elle",
-    productId: "3GV",
-    metroArea: "undefined",
-    projectGroupId: 5643,
-  },
-  {
-    productName: "Wendigo",
-    productId: "4389",
-    metroArea: "Staunton",
-    fullName: "Refined Industries",
-    projectGroupId: 35,
-  },
-  {
-    productName: "undefined",
-    productId: "LV3",
-    metroArea: "Cuzco",
-    fullName: "Village",
-    projectGroupId: 223,
-  },
-  {
-    productName: "undefined",
-    productId: "LV3",
-    metroArea: "Cuzco",
-    fullName: "Village",
-    projectGroupId: 223,
-  },
-];
+const initialResults: Result[] = mapApiData();
 
 export default function App() {
   const [results, setResults] = useState(initialResults);
@@ -44,7 +15,7 @@ export default function App() {
           <input
             id="searchInput"
             type="text"
-            onKeyDown={handleSubmit}
+            onChange={handleSubmit}
             placeholder="Please Enter A Search Term"
           />
         </div>
@@ -54,18 +25,66 @@ export default function App() {
   );
 
   function onSubmitSearch(at: string) {
-    let newResults = results;
-    newResults = newResults.filter((obj) =>
-      Object.values(obj).some((val) => val === at)
+    let newResults = initialResults;
+    setResults(
+      newResults.filter((el) => {
+        if (at === "") {
+          return el;
+        } else {
+          return includes(at, el) ? el : "";
+        }
+      })
     );
-    setResults(newResults);
   }
 
   function handleSubmit(event: React.SyntheticEvent<HTMLInputElement>) {
-    event.preventDefault();
     const input = event.currentTarget.value;
-
     console.log("safe, plus:" + input);
     onSubmitSearch(input);
   }
+}
+function mapApiData() {
+  let results: Result[] = [
+    {
+      product: {
+        projectName: "undefined",
+        productId: "undefined",
+        projectGroupId: "undefined",
+        productName: "undefined",
+      },
+      metro: {
+        metroAreaId: "undefined",
+        metroAreaTitle: "undefined",
+        metroAreaStateAbr: "VA",
+        metroAreaStateName: "undefined",
+      },
+      project: {
+        projectGroupId: "undefined",
+        metroAreaId: "undefined",
+        fullName: "undefined",
+        status: "undefined",
+      },
+    },
+  ];
+
+  return results;
+}
+function includes(param: string, result: Result) {
+  let caseParam = param.toLowerCase();
+  for (const [key, value] of Object.entries(result.metro)) {
+    if (value?.toLowerCase().includes(caseParam)) {
+      return true;
+    }
+  }
+  for (const [key, value] of Object.entries(result.project)) {
+    if (value?.toLowerCase().includes(caseParam)) {
+      return true;
+    }
+  }
+  for (const [key, value] of Object.entries(result.product)) {
+    if (value?.toLowerCase().includes(caseParam)) {
+      return true;
+    }
+  }
+  return false;
 }
